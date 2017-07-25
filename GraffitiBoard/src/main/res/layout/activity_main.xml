@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tools"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_item_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/undo" />
+
+        <ImageView
+            android:id="@+id/redo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_item_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/redo" />
+
+        <ImageView
+            android:id="@+id/pen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_item_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/pen" />
+
+        <ImageView
+            android:id="@+id/eraser"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_item_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/eraser" />
+
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toolbar_item_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/clear" />
+    </LinearLayout>
+
+    <com.graffitiboard.view.GraffitiBoard
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/tools"
+        android:id="@+id/palette"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/seek_bar"
+        android:max="30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
